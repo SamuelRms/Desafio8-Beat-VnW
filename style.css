@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 20px;
+  list-style: none;
+}
+body,
+p,
+h1,
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* Estrutura */
+.estrutura {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header header'
+    'conteudo conteudo'
+    'footer footer';
+}
+@media (max-width: 756px) {
+  .estrutura {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'header'
+      'conteudo'
+      'footer';
+  }
+}
+
+/* header */
+.header {
+  grid-area: header;
+  background: linear-gradient(180deg, #129799, #ffa185);
+  display: grid;
+  align-items: center;
+  padding: 30px;
+}
+.lista-menu1 {
+  display: flex;
+  margin: auto 200px auto 200px;
+}
+.lista-menu-inicio {
+  margin: 0 auto;
+}
+.lista-menu-inicio a {
+  font-size: 30px;
+}
+.lista-menu-inicio a:hover {
+  color: #ffa185;
+}
+.batida {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.batida h1 {
+  font-size: 40px;
+}
+.life {
+  width: 350px;
+  height: 320px;
+}
+.lista-menu2 {
+  justify-content: space-between;
+  display: flex;
+}
+.lista-menu-meio {
+  padding: 150px 0px 50px 0px;
+}
+.lista-menu-meio a {
+  font-size: 30px;
+}
+.lista-menu-meio a:hover {
+  color: #129799;
+}
+
+@media (max-width: 756px) {
+  .batida {
+    display: block;
+  }
+  .batida h1 {
+    margin-top: 150px;
+  }
+  .life {
+    height: auto;
+  }
+  .lista-menu-inicio {
+    margin: auto;
+  }
+  .lista-menu1 {
+    justify-content: space-evenly;
+    margin: 0;
+  }
+  .inicio {
+    display: inline-block;
+  }
+}
+
+/* Conteudo */
+.conteudo {
+  grid-area: conteudo;
+  background-color: #ffa185;
+  padding: 30px;
+}
+.aquarela {
+  width: 70%;
+}
+.aquarela h2 {
+  padding: 30px 0;
+  font-size: 30px;
+}
+.aquarela p {
+  font-size: 15px;
+  color: #000;
+  margin-bottom: 50px;
+}
+.portifolio {
+  display: inline-flex;
+  width: 100%;
+}
+.amostra-portifolio {
+  display: inline-block;
+  width: 50%;
+}
+.fotos {
+  padding: 7.5px 15px 7.5px 0;
+}
+.veja-mais {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.veja-mais p a {
+  color: #000;
+  font-size: 20px;
+}
+div p a:hover {
+  color: #129799;
+}
+
+/* footer */
+.footer {
+  grid-area: footer;
+  background: linear-gradient(0deg, #129799, #ffa185);
+  height: 160px;
+}
+.roda-pe {
+  display: flex;
+  width: 100%;
+}
+.container-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.container-redes a + a {
+  margin-left: 20px;
+}
+.redes-sociais {
+  width: 60px;
+  height: 60px;
+}
+.redes-sociais:hover {
+  background-color: #ffa185;
+  border-radius: 10px;
+}
+.container-final {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+.final {
+  font-size: 20px;
+  display: inline;
+  margin-right: 0.5em;
+}
+.final:hover {
+  color: #ffa185;
+}
+@media (max-width: 500px) {
+  .life {
+    width: 280px;
+  }
+  .batida h1 {
+    font-size: 20px;
+    margin-top: 100px;
+  }
+  .lista-menu1 li a {
+    font-size: 15px;
+  }
+  .lista-menu2 li a {
+    font-size: 15px;
+  }
+  .lista-menu-meio {
+    padding: 35px 0 0;
+  }
+  .aquarela h2 {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+  .frase p {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .redes-sociais {
+    width: 40px;
+    height: 40px;
+  }
+  .container-redes {
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .container-final {
+    width: 100%;
+    position: absolute;
+  }
+}
